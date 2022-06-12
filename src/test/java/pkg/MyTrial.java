@@ -4,6 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.junit.After;
 public class MyTrial {
 	
@@ -12,7 +15,8 @@ public class MyTrial {
 	@Before
 	public void setUP() {
 		System.out.println("Setting up environment");
-		System.setProperty("webdriver.chrome.driver","/Users/pillai_amal/Downloads/chromedriver");
+		WebDriverManager.chromedriver().setup();
+//		System.setProperty("webdriver.chrome.driver","/Users/pillai_amal/Downloads/chromedriver");
 		driver = new ChromeDriver();
 	}
 	
