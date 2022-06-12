@@ -29,5 +29,6 @@ public class MyTrial {
 	@After
 	public void end() {
 		System.out.println("Test completed");
+		driver.close();
 	}
 }
